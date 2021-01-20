@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc>
+    <assembly>
+        <name>Atalasoft.dotImage.Barcoding.Writing</name>
+    </assembly>
+    <members>
+        <member name="N:Atalasoft.Barcoding.Writing">
+            <summary>Exposes classes for authoring barcodes.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.BarcodeAlignment">
+            <summary>Determines how barcodes will be aligned within a bounding rectangle</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeAlignment.Near">
+            <summary>Barcodes will be drawn starting from the near edge (left edge for left to right layout)</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeAlignment.Center">
+            <summary>Barcodes will be drawn centered within the bounds</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeAlignment.Far">
+            <summary>Barcodes will be drawn starting from the far edge (right edge for left to right layout)</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.BarcodeOrientation">
+            <summary>Used to set the orientation of barcodes being drawn</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeOrientation.Right">
+            <summary>Left to right</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeOrientation.Left">
+            <summary>Right to left</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeOrientation.Up">
+            <summary>Bottom to top</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeOrientation.Down">
+            <summary>Top to bottom</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.BarcodeStyle">
+            <summary>Used to set the symbology used in one-dimensional barcodes</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.MsiPlessey">
+            <summary>Variable length. Numeric only. Always includes a check digit.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Interleaved2of5">
+            <summary>Variable length. Numeric only. If the number of digits is odd, a 0 will be prepended to the data.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Interleaved2of5Chk">
+            <summary>Same as Interleaved2of5 but with a check digit.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Codabar">
+            <summary>Variable length. Numeric and the capital letters A-D.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code39">
+            <summary>Variable length. Numeric, uppercase letters and space, -, ., $, , / and +. Asterisk is used as a start/stop character.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code39Chk">
+            <summary>Same as Code39, but with a check digit.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code39Ext">
+            <summary>Variable length but includes the ASCII 128 character set.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code39ExtChk">
+            <summary>Same as Code39Ext, but with a check digit.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code93">
+            <summary>Similar to Code39, but includes two weighted check digits.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code93Ext">
+            <summary>Same as Code93 but supports the ASCII 128 character set.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code128A">
+            <summary>Variable length. Includes capital letters, digits, punctuation marks, and control characters. A check digit is added.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code128B">
+            <summary>Similar to Code128A, but includes lower case letters instead of some symbols.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Code128C">
+            <summary>Variable length. Numeric only. High density. It encodes an even number of digits, but will prepend a leading zero if needed.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.UpcA">
+            <summary>Fixed length, twelve digits. Numeric only. Eleven digits are supplied and a 12th check digit will be added.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.UpcE">
+            <summary>Fixed length, seven digits. Numeric only. Six digits are supplied and a 7th check digit will be added.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Ean13">
+            <summary>Fixed length, thirteen digits. Numeric only. Twelve digits are supplies and a 13th check digit will be added.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Ean8">
+            <summary>Fixed length, eight digits. Numeric only. Seven digits are supplies and an 8th check digit will be added.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.BarcodeStyle.Postnet">
+            <summary>Fixed length. Numeric only. A check digit will be added.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding">
+            <summary>Encoding methods used to encode text strings into Data Matrix data.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding.Auto">
+            <summary>Select the best encoding method.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding.ASCII">
+            <summary>Uses ASCII only</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding.C40">
+            <summary>Uppercase, numeric and space.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding.Text">
+            <summary>Encodes characters from standard and extended ASCII</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding.X12">
+            <summary>Encodes uppercase, numeric, space, carriage return, * and &gt;.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding.EDIFACT">
+            <summary>Encodes characters from ASCII 32 to 94, which includes space, letters, numbers and many symbols and punctuation characters.</summary>
+        </member>
+        <member name="F:Atalasoft.Barcoding.Writing.DataMatrixSymbolEncoding.Base256">
+            <summary>Encodes all 8 bit characters.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.DataMatrixSymbolOrientation">
+            <summary>Used to control the orientation of Data Matrix barcodes.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.DataMatrixSymbolSize">
+            <summary>Used to control the size of the Data Matrix symbols. S members are square (equal rows and columns), R members are ordered row x column.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.LayoutMode">
+            <summary>Used to control the layout of modules in a barcode. If set to auto, the module width and ratio are computed for you.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.Pdf417SymbolOrientation">
+            <summary>Used to set the orientation of PDF 417 barcodes.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.BarcodeControl">
+            <summary>BarcodeControl is a Windows Forms control that allows authoring of one-dimensional barcodes.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeControl.#ctor">
+            <summary>Constructs a new BarcodeControl.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeControl.Dispose">
+            <summary>Disposes the BarcodeControl object.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeControl.Validate(System.String,System.Boolean)">
+            <summary>Validates the string for the BarcodeControl's Barcode style.</summary>
+            <returns>Returns true if the barcode is valid, false if allowExceptions is set to false.</returns>
+            <param name="text">The text to validate.</param>
+            <param name="allowExceptions">If allowExceptions is set to true, Validate will throw an ArgumentException if the text is invalid.</param>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.Alignment">
+            <summary>Sets or gets the alignment of the barcode within the Bounds of the control. Defaults to center.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.BarcodeBounds">
+            <summary>Gets the actual rectangle of the rendered barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.CaptionFont">
+            <summary>Sets or gets the font used to display the barcode's caption (if enabled).</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.DisplayCaption">
+            <summary>Sets or gets whether or not the caption should be drawn with the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.EncodedText">
+            <summary>Gets the text that was rendered in the barcode. This may include check sum digits or start/stop codes not painted by the control.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.LayoutMode">
+            <summary>Sets or gets how the barcode will be rendered within the Bounds. Default is LayoutMode.Auto</summary>
+            <remarks>When set to Auto, the control will determine the best size and proportions for the barcode.</remarks>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.ModuleRatio">
+            <summary>Sets or gets the ratio of wide bars to narrow bars in the barcode in barcodes that use wide and narrow strips. Default is 1.5.</summary>
+            <remarks>Will throw if the value is set to a number less than 1.</remarks>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.ModuleWidth">
+            <summary>Determines the widths of narrow bars in a barcode with both narrow and wide bars. Default is 2.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.Orientation">
+            <summary>Sets or gets the orientation of the rendered barcode. Default is BarcodeOrientation.Right</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeControl.Style">
+            <summary>Sets or gets the type of the barcode that will be rendered. Default is BarcodeStyle.Code39</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.BarcodeWriter">
+            <summary>The BarcodeWriter class allows creation of one-dimensional barcodes on Graphics objects.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeWriter.#ctor">
+            <summary>Constructs a new BarcodeWriter object</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeWriter.#ctor">
+            <summary>Constructs a new BarcodeWriter object that will create Code 39 barcodes.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeWriter.#ctor(Atalasoft.Barcoding.Writing.BarcodeStyle)">
+            <summary>Constructs a new BarcodeWriter object that will create barcodes in the specified symbology.</summary>
+            <param name="style">The symbology of the barcodes that will be written.</param>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeWriter.Dispose">
+            <summary>Releases resources held by the writer.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeWriter.Render(System.String,System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>Draws a barcode onto the Graphics object within the bounds.</summary>
+            <remarks>Although any string may be passed in, not all characters may be representable in the barcode. Use Validate() to ensure that all text is renderable.</remarks>
+            <param name="text">The text of the barcode.</param>
+            <param name="graphics">The Graphics object on which to draw.</param>
+            <param name="rect">The bounds of the barcode.</param>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.BarcodeWriter.Validate(System.String,System.Boolean)">
+            <summary>Validates the string for the BarcodeControl's Barcode style.</summary>
+            <param name="text">The text to validate.</param>
+            <param name="allowExceptions">If allowExceptions is set to true, Validate will throw an ArgumentException if the text is invalid.</param>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.Alignment">
+            <summary>Sets or gets the alignment of the barcode within the Bounds of the control. Defaults to center.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.BackColor">
+            <summary>Sets or gets the background color of the barcode. Default is white.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.Bounds">
+            <summary>Gets the bounds of the most recently rendered barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.CaptionFont">
+            <summary>Sets or gets the font used for the barcode caption (if enabled). Default is 8 point Arial.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.DisplayCaption">
+            <summary>Sets or gets whether or not the caption should be drawn with the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.EncodedText">
+            <summary>Gets the text that was rendered in the barcode. This may include check sum digits or start/stop codes not contained in the text passed to render.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.ForeColor">
+            <summary>The foreground color of the barcode. Default is black.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.LayoutMode">
+            <summary>Sets or gets how the barcode will be rendered within the Bounds. Default is LayoutMode.Auto</summary>
+            <remarks>When set to Auto, the control will determine the best size and proportions for the barcode.</remarks>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.ModuleRatio">
+            <summary>Sets or gets the ratio of wide bars to narrow bars in the barcode in barcodes that use wide and narrow strips. Default is 1.5.</summary>
+            <remarks>Will throw if the value is set to a number less than 1.</remarks>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.ModuleWidth">
+            <summary>Determines the widths of narrow bars in a barcode with both narrow and wide bars. Default is 2.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.Orientation">
+            <summary>Sets or gets the orientation of the rendered barcode. Default is BarcodeOrientation.Right</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.BarcodeWriter.Style">
+            <summary>Sets or gets the type of the barcode that will be rendered. Default is BarcodeStyle.Code39</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl">
+            <summary>BarcodeControl is a Windows Forms control that allows authoring of Data Matrix two-dimensional barcodes. Data Matrix is a compact format that can encode binary data as well as text.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.#ctor">
+            <summary>Constructs a new DataMatrixBarcodeControl.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.Dispose">
+            <summary>Disposes the DataMatrixBarcodeControl object.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.Columns">
+            <summary>Returns the number of columns in the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.InnerBounds">
+            <summary>Returns the inner bounds of the DataMatrix symbol.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.ModuleSize">
+            <summary>Gets or sets the smallest square element in the symbol. Default is 20.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.Orientation">
+            <summary>Sets the orientation of the barcode. Default is DataMatrixSymbolOrientation.Horizontal</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.Rows">
+            <summary>Gets the number of rows in the DataMatrix barcode</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.SymbolEncoding">
+            <summary>Sets or gets the encoding used for text strings rendered in the Data Matrix barcode. Default is DataMatrixSymbolEncoding.Auto.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeControl.SymbolSize">
+            <summary>Gets or sets the symbol size used for rendered Data Matrix barcodes. Defaults to DataMatrixSymbolSize.Auto.</summary>
+            <remarks>Auto will select the smallest symbol size that will contain the data supplied.</remarks>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter">
+            <summary>The DataMatrixBarcodeWriter class allows creation of Data Matrix two-dimensional barcodes on Graphics objects.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.#ctor">
+            <summary>Constructs a new DataMatrixBarcodeWriter object.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Dispose">
+            <summary>Disposes resource aquired by the DataMatrixBarcodeWriter object.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Render">
+            <summary>Draws the Data Matrix barcode on a Graphics object.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Render(System.Byte[],System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>Draws a barcode representing the supplied binary data onto the Graphics object within the bounds.</summary>
+            <param name="buffer">Binary data to render in the barcode.</param>
+            <param name="g">The Graphics object on which to draw.</param>
+            <param name="rect">The bounds of the barcode.</param>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Render(System.String,System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>Draws a barcode representing the supplied text onto the Graphics object within the bounds.</summary>
+            <param name="text">The text of the barcode.</param>
+            <param name="g">The Graphics object on which to draw.</param>
+            <param name="rect">The bounds of the barcode.</param>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.BackColor">
+            <summary>Sets or gets the background color of the barcode. Default is white.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Bounds">
+            <summary>Gets the bounds of the most recently rendered barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Columns">
+            <summary>Returns the number of columns in the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Encoding">
+            <summary>Sets or gets the encoding used for text strings rendered in the Data Matrix barcode. Default is DataMatrixSymbolEncoding.Auto.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.ForeColor">
+            <summary>The foreground color of the barcode. Default is black.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.ModuleSize">
+            <summary>Gets or sets the smallest square element in the symbol. Default is 20.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Orientation">
+            <summary>Sets the orientation of the barcode. Default is DataMatrixSymbolOrientation.Horizontal</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Rows">
+            <summary>Gets the number of rows in the DataMatrix barcode</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.DataMatrixBarcodeWriter.Size">
+            <summary>Gets or sets the symbol size used for rendered Data Matrix barcodes. Defaults to DataMatrixSymbolSize.Auto.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl">
+            <summary>BarcodeControl is a Windows Forms control that allows authoring of PDF 417 two-dimensional barcodes. PDF 417 is a format that can encode binary data as well as text and can includes extensive protection from symbol damage.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.#ctor">
+            <summary>Constructs a new DataMatrixBarcodeControl.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.Dispose">
+            <summary>Disposes the Pdf417BarcodeControl object.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.Columns">
+            <summary>Returns the number of columns in the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.ErrorCorrectionLevel">
+            <summary>Gets or sets the error correction level in the barcode.</summary>
+            <remarks>This value determines how many error correction code words will be included in the barcode. The correspondence is exponential. A value of 0 yields 21 code words, 1 yields 22 code words. In general a value of n yields 2n+1 code words.</remarks>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.InnerBounds">
+            <summary>Returns the inner bounds of the PDF 417 symbol.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.LayoutMode">
+            <summary>Determines how the PDF 417 modules are presented. Default is LayoutMode.Auto</summary>
+            <remarks>If LayoutMode is set to Manual, ModuleWidth and ModuleHeight need to be set by client code.</remarks>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.ModuleHeight">
+            <summary>Sets or gets the height of modules within the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.ModuleWidth">
+            <summary>Sets or gets the width of modules within the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.Orientation">
+            <summary>Sets or gets the orientation of the barcode. Default is Pdf417SymbolOrientation.Horizontal</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.Rows">
+            <summary>Gets the number of rows in the DataMatrix barcode</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeControl.Truncated">
+            <summary>Sets or gets whether or not stop patterns and right row indicators will be drawn.</summary>
+        </member>
+        <member name="T:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter">
+            <summary>The DataMatrixBarcodeWriter class allows creation of PDF 417 two-dimensional barcodes on Graphics objects.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Dispose">
+            <summary>Disposes the Pdf417BarcodeWriter object.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Render">
+            <summary>Draws the PDF 417 barcode on a Graphics object.</summary>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Render(System.Byte[],System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>Draws a barcode representing the supplied binary data onto the Graphics object within the bounds.</summary>
+            <param name="bytes">Binary data to render in the barcode.</param>
+            <param name="g">The Graphics object on which to draw.</param>
+            <param name="rect">The bounds of the barcode.</param>
+        </member>
+        <member name="M:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Render(System.String,System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>Draws a barcode representing the supplied text onto the Graphics object within the bounds.</summary>
+            <param name="text">The text of the barcode.</param>
+            <param name="g">The Graphics object on which to draw.</param>
+            <param name="rect">The bounds of the barcode.</param>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Bounds">
+            <summary>Binary data to render in the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Columns">
+            <summary>Returns the number of columns in the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.ErrorCorrectionLevel">
+            <summary>Gets or sets the error correction level in the barcode.</summary>
+            <remarks>This value determines how many error correction code words will be included in the barcode. The correspondence is exponential. A value of 0 yields 21 code words, 1 yields 22 code words. In general a value of n yields 2n+1 code words.</remarks>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Layout">
+            <summary>Determines how the PDF 417 modules are presented. Default is LayoutMode.Auto</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.ModuleHeight">
+            <summary>Sets or gets the height of modules within the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.ModuleWidth">
+            <summary>Sets or gets the width of modules within the barcode.</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Orientation">
+            <summary>Sets or gets the orientation of the barcode. Default is Pdf417SymbolOrientation.Horizontal</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Rows">
+            <summary>Gets the number of rows in the DataMatrix barcode</summary>
+        </member>
+        <member name="P:Atalasoft.Barcoding.Writing.Pdf417BarcodeWriter.Truncated">
+            <summary>Sets or gets whether or not stop patterns and right row indicators will be drawn.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\bin\Debug\Accounting System.exe
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\bin\Debug\Accounting System.pdb
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\bin\Debug\Accounting System.xml
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\ResolveAssemblyReference.cache
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\Accounting_System.FrmJournal.resources
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\Accounting_System.Resources.resources
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\Accounting System.vbproj.GenerateResource.Cache
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\Accounting System.exe
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\Accounting System.xml
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\Accounting System.pdb
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\obj\Debug\Accounting_System.FrmMain.resources
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\bin\Debug\Atalasoft.dotImage.Barcoding.Writing.dll
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\bin\Debug\Atalasoft.Shared.dll
+E:\ADNAN'S_ZORKIF_WORK\VB_NET_PROJECTS\Accounting System\Accounting System Source Code\Accounting System\Accounting System\bin\Debug\Atalasoft.dotImage.Barcoding.Writing.xml
